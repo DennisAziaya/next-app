@@ -1,0 +1,28 @@
+import React from 'react';
+import UserIcon from "../components/icons/UserIcon";
+import TitleText from "../components/TitleText";
+import Container from "../components/Container";
+import SocialIcon from "../components/icons/Socialicon";
+import {Meta} from "@storybook/react";
+
+
+export const Card  : React.FC = () => {
+    return (
+        <Container>
+            <TitleText title={"Card"}/>
+            <div className={'flex flex-col   w-[70%] md:w-[100%] lg:w-[80%] mx-auto justify-center bg-gray-600 rounded-xl items-center p-8'}>
+                <UserIcon/>
+                <div className="text-white text-center my-4">
+                    <div className={'text-base font-bold'}>James Smith</div>
+                    <div className={'text-[.85rem] font-light'}>Javascript Developer</div>
+                </div>
+                <SocialIcon/>
+            </div>
+        </Container>
+    );
+};
+
+export default {
+    title: 'Card',
+    component: Card,
+} as Meta;
